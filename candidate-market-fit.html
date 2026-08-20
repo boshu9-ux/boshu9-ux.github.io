@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Candidate-Market Fit — Bo Xu</title>
+<meta name="description" content="Candidate-Market Fit (CMF) statement, superpowers, and target archetypes for Bo Xu based on the Never Search Alone framework.">
+<style>
+  :root {
+    color-scheme: dark light;
+    --bg: #14171c;
+    --surface: #1c2027;
+    --surface-alt: #232932;
+    --text: #eceef1;
+    --muted: #9aa2ad;
+    --faint: #6f7783;
+    --line: #2b313a;
+    --accent: #8fb4ff;
+    --accent-bg: rgba(143, 180, 255, 0.1);
+    --tag-bg: #232932;
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fffdf8;
+      --surface: #f5f1e8;
+      --surface-alt: #ece6d8;
+      --text: #2f2a24;
+      --muted: #6b6357;
+      --faint: #8a8175;
+      --line: #e2dbcc;
+      --accent: #2f5bbf;
+      --accent-bg: rgba(47, 91, 191, 0.08);
+      --tag-bg: #ece6d8;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 64px 28px 96px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 44px;
+    font-family: var(--mono);
+    font-size: 13px;
+  }
+  .nav a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .nav a:hover { text-decoration: underline; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(34px, 6vw, 48px);
+    line-height: 1.12;
+    font-weight: 600;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  .hook-box {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    padding: 24px 28px;
+    border-radius: 0 8px 8px 0;
+    margin: 28px 0 44px;
+  }
+  .hook-box p {
+    font-family: var(--serif);
+    font-size: 20px;
+    line-height: 1.45;
+    margin: 0 0 12px;
+    color: var(--text);
+    font-weight: 500;
+  }
+  .hook-box .hook-sub {
+    font-family: var(--sans);
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  h2 {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 600;
+    margin: 48px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.005em;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+
+  .card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    background: var(--tag-bg);
+    color: var(--accent);
+    padding: 2px 8px;
+    border-radius: 4px;
+  }
+
+  .card p {
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--muted);
+    font-size: 14.5px;
+  }
+  li {
+    margin-bottom: 8px;
+  }
+  li strong {
+    color: var(--text);
+  }
+
+  .calibration-note {
+    background: var(--accent-bg);
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 13px;
+    color: var(--accent);
+    margin-top: 14px;
+    font-family: var(--sans);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 14.5px;
+  }
+  th, td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+  }
+  th {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--faint);
+    background: var(--surface);
+  }
+  td {
+    color: var(--muted);
+  }
+  td strong {
+    color: var(--text);
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--faint);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer a { color: var(--faint); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="nav">
+    <a href="index.html">← boshu9-ux Projects</a>
+    <div>
+      <a href="resume.html" style="margin-right: 18px;">📄 Resume</a>
+      <a href="Bo-Xu-Resume.pdf" download>⬇️ PDF</a>
+    </div>
+  </nav>
+
+  <header>
+    <p class="eyebrow">Candidate-Market Fit</p>
+    <h1>Candidate-Market Fit (CMF)</h1>
+    <div class="subtitle">Based on the <em>Never Search Alone</em> Framework (Phyl Terry) · Listening-Tour Calibrated</div>
+  </header>
+
+  <main>
+    <div class="hook-box">
+      <p>"I am a customer-centric Senior Data & AI Engineer who specializes in turning complex, ambiguous business and market data into reliable, production-grade systems that users love."</p>
+      <div class="hook-sub">
+        Bridging deep technical execution (<strong>PySpark, SQL, Databricks, and RAG/Agentic AI</strong>) with high stakeholder empathy derived from 15 years across multi-strategy hedge fund data platforms (<strong>Centiva Capital</strong>), global buy-side financial data integrations (<strong>RIMES Technologies</strong>), and early-stage startup architecture (<strong>Mach-AI</strong>).
+      </div>
+    </div>
+
+    <h2>⚡ 1. The 3 Validated Superpowers</h2>
+
+    <div class="card">
+      <h3>Superpower 1: Customer-Centric Business & Data Delivery <span class="badge">Core Differentiator</span></h3>
+      <p>A rare combination of deep technical execution with high counterparty empathy. Rather than building isolated tech for its own sake, I partner directly with stakeholders (Portfolio Managers, quant researchers, client services, operators) to uncover core needs and ship pragmatic, high-impact data solutions.</p>
+      <ul>
+        <li><strong>RIMES Technologies:</strong> Onboarded and integrated 800+ financial feeds across 300+ buy-side institutional clients, maintaining 95% timeliness against a 1-hour SLA.</li>
+        <li><strong>Centiva Capital:</strong> Partnered directly with PMs, quantitative analysts, and compliance teams to convert revenue-critical financial questions into shipped data pipelines.</li>
+      </ul>
+      <div class="calibration-note">
+        💡 <strong>Listening Tour Calibration (from Alan & Linda):</strong> Lead with customer-centricity, easy collaboration, and practical business velocity as the differentiator—treating raw technical competence as the baseline bar.
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Superpower 2: High-Reliability Data Foundations & Self-Healing Pipelines</h3>
+      <p>Architecting production data platforms with ground-truth data contracts, Unity Catalog metadata governance, and self-healing automation that treats manual intervention as a bug.</p>
+      <ul>
+        <li><strong>100+ Production Pipelines:</strong> Built and operated high-throughput PySpark & Databricks pipelines on AWS feeding research and ML workflows with automated CI/CD testing.</li>
+        <li><strong>Data Governance & Contracts:</strong> Defined data contracts and metadata lineage layers that made complex market datasets dependable for downstream quantitative models.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Superpower 3: AI-Native Engineering with Rigorous Guardrails</h3>
+      <p>Rapidly building and evaluating applied AI systems (RAG, agent loops, document parsing) using modern LLMs, backed by automated accuracy checks, faithfulness scoring, and runtime guardrails.</p>
+      <ul>
+        <li><strong>Production RAG Assistant:</strong> Designed and deployed a knowledge-access assistant over structured financial data and governance metadata at Centiva Capital.</li>
+        <li><strong>Agentic AI Architecture:</strong> Founding Engineer & CTO at Mach-AI, owning end-to-end agent orchestration workflows and evaluation loops.</li>
+      </ul>
+    </div>
+
+    <h2>🏢 2. Primary Target Archetypes</h2>
+
+    <div class="card">
+      <h3>Archetype A: Forward Deployed Engineer (FDE) / Solutions Data Engineer</h3>
+      <p><strong>Why It Fits:</strong> Directly exercises the intersection of stakeholder empathy, rapid technical prototyping, and end-to-end data pipeline integration.</p>
+      <p><strong>Target Companies:</strong> AI application platforms, defense tech, and enterprise data scaleups (e.g., <em>Laurel, Skiffra, CHAOS Industries, Snowflake, CoreWeave, Lovelytics</em>).</p>
+      <p><strong>Ideal Scope:</strong> Embedding with enterprise customers or internal high-value stakeholders, scoping complex data problems, and building custom integration pipelines and AI workflows.</p>
+    </div>
+
+    <div class="card">
+      <h3>Archetype B: Senior Data Engineer (Data Platform & AI Enablement)</h3>
+      <p><strong>Why It Fits:</strong> High-leverage core engineering building Lakehouse infrastructure (Databricks/PySpark), data contracts, and AI-ready semantic layers.</p>
+      <p><strong>Target Companies:</strong> Series B–D scaleups, AI healthcare, AdTech, and high-growth platforms (e.g., <em>Regard, Anduril, Tatari, Crexi, 3Cloud, Collibra</em>).</p>
+      <p><strong>Ideal Scope:</strong> Core data pipeline architecture, distributed data processing, data contracts, and model/research data delivery.</p>
+    </div>
+
+    <h2>🧭 3. Target Market & Environment Criteria</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Dimension</th>
+          <th>✅ Must-Haves (Target Criteria)</th>
+          <th>❌ Must-Nots (Walk-Away Limits)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Location & Model</strong></td>
+          <td><strong>Los Angeles, CA</strong> (Hybrid / Onsite) or <strong>Remote US</strong>.</td>
+          <td>Long-distance relocation or rigid SF-only mandates.</td>
+        </tr>
+        <tr>
+          <td><strong>Culture & Leadership</strong></td>
+          <td>High agency, accountable leadership (owning decisions), open-minded culture with collaborative peers.</td>
+          <td>Siloed "dungeon" coding with zero collaboration, or top-down authoritarian environments.</td>
+        </tr>
+        <tr>
+          <td><strong>Operations</strong></td>
+          <td>Purpose-driven working sessions, lean processes, visible impact.</td>
+          <td>Excessive bureaucracy, administrative tracking fatigue, or ambiguous metrics.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>🔍 4. Known Blind Spots & Operating Rules</h2>
+
+    <div class="card">
+      <h3>1. Communication Structure (From Linda Wang's Feedback)</h3>
+      <p><strong>Feedback:</strong> Tendency to jump into explanations from the middle of a thought rather than establishing the context first.</p>
+      <p><strong>Operating Rule:</strong> Practice explicit <strong>"1-2-3 Framing"</strong> in all interviews and stakeholder updates: <strong>Context → Core Problem → Shipped Solution</strong>.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Positioning Calibration (From Alan's Feedback)</h3>
+      <p><strong>Feedback:</strong> Over-indexing on heavy "Architect" or "Tech Savant" branding sets an unnatural bar and misses the true value proposition.</p>
+      <p><strong>Operating Rule:</strong> Frame deep technical skill as the <strong>rock-solid baseline bar</strong>, while framing <strong>customer-centric delivery, likability, and practical business velocity</strong> as your winning differentiator.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div>Candidate-Market Fit · Bo Xu</div>
+    <div><a href="index.html">boshu9-ux.github.io</a></div>
+  </footer>
+
+</div>
+</body>
+</html>
